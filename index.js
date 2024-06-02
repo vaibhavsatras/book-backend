@@ -7,6 +7,11 @@ const app = express();
 const PORT = process.env.PORT || 5000 
 const cors = require('cors')
 
+app.set('view engine','ejs')
+app.set('view options',{
+    layout: false
+})
+
 app.use(cors({
     origin: ["https://fornt-end-vbyj.vercel.app"],
     methods:["POST","GET"],
