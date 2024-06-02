@@ -15,6 +15,11 @@ app.use(cors({
 
 app.use(express.json())
 
+app.get('/home',(req,resp)=>{
+
+        resp.send('Hello Vaibhav')
+
+})
 
 app.use('/',router)
 app.use('/user',userRoute)
